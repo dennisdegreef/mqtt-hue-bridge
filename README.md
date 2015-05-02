@@ -16,7 +16,7 @@ $ npm install
 Start up the server by editing the config.js first to suit your needs
 ```bash
 $ $EDITOR config.js
-$ node
+$ node server.js
 ```
 
 Or by using environment variables
