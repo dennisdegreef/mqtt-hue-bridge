@@ -10,6 +10,7 @@ Clone the repository
 ```bash
 $ git clone https://github.com/dennisdegreef/mqtt-hue-bridge.git
 $ cd mqtt-hue-bridge
+$ npm install
 ```
 
 Start up the server by editing the config.js first to suit your needs
