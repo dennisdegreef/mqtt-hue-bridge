@@ -1,4 +1,4 @@
-mqtt-bridge
+mqtt-hue-bridge
 ===========
 
 This node.js server listens on MQTT messages for lights and translates it to the philips hue bridge
