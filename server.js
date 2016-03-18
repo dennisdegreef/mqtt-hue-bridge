@@ -16,10 +16,11 @@ var mqtt     = require('mqtt');
 var hue      = require('node-hue-api');
 var config   = require('./config');
 
-var mqttUri  = 'mqtt://' + config.mqtt.hostname + ':' + config.mqtt.port;
-var client   = mqtt.connect(mqttUri);
-var api      = new hue.HueApi(config.hue.hostname, config.hue.username);
-var state    = hue.lightState.create();
+var mqttUri     = 'mqtt://' + config.mqtt.hostname + ':' + config.mqtt.port;
+var mqttOptions = {username: config.mqtt.username, password: config.mqtt.password};
+var client      = mqtt.connect(mqttUri, mqttOptions);
+var api         = new hue.HueApi(config.hue.hostname, config.hue.username);
+var state       = hue.lightState.create();
 
 // topic is /light/<id>/<property>
 var topicRegex = config.mqtt.namespace + "/(.*)/(.*)";
